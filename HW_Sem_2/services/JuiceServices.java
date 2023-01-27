@@ -14,7 +14,7 @@ public class JuiceServices {
     public GetJuiceResponse getJuice(String name) {
         Juice juce = catalogRepository.getJuiceByName(name);
         if(juce == null) {
-            return new GetJuiceResponse(true, "Этот кофе закончился", null);
+            return new GetJuiceResponse(true, "Этот сок закончился", null);
         }
         return new GetJuiceResponse(false, null, juce);
     }

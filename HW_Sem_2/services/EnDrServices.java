@@ -14,7 +14,7 @@ public class EnDrServices {
     public GetEnDrResponse getEnergyDrink(String name) {
         EnegryDrink EnDr = catalogRepository.getEnergyDrinkbyName(name);
         if(EnDr == null) {
-            return new GetEnDrResponse(true, "Этот кофе закончился", null);
+            return new GetEnDrResponse(true, "Этот ЭНЕГРЕТИК закончился", null);
         }
         return new GetEnDrResponse(false, null, EnDr);
     }

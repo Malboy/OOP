@@ -1,6 +1,6 @@
 package HW_Sem_2.Entityes;
 
-public class Product {
+public abstract class Product implements ComparableProduct {
     
     private String name;
     private Integer price;
@@ -24,5 +24,10 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(ComparableProduct o) {
+        return this.getAttractiveness().compareTo(o.getAttractiveness());
     }
 }

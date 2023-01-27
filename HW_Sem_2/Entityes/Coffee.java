@@ -1,15 +1,19 @@
 package HW_Sem_2.Entityes;
 
-public class Coffee {
+public class Coffee extends Product {
     
     private String name;
     private Integer price;
     private boolean withMilk;
 
     public Coffee(Integer Price, String Name, boolean Milk) {
-        this.price = Price;
-        this.name = Name;
+        super(Price, Name);
         this.withMilk = Milk;
+    }
+
+    @Override
+    public Integer getAttractiveness() {
+        return Integer.valueOf(price);
     }
 
     public Integer getPrice() {
